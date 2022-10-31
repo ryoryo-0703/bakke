@@ -1,0 +1,865 @@
+@media screen and (max-width:520px) {
+        /*スライドショー用の設定*/
+    *{
+        min-width: 0;
+        min-height: 0;
+    }
+
+
+    body{
+        display: grid;
+        grid-template: 
+            "nav"
+            "main"
+            "footer";
+        margin: 0 auto;
+        width: 100vh;
+    }
+
+
+    /*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ スライドメニュー ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+    nav{
+        grid-area: nav;
+        width: 100%;
+        height: 80px;
+    }
+    .menu-btn {
+        position: fixed;
+        /*top: 10px;
+        left: 10px;*/
+        display: flex;
+        /*height: 60px;
+        width: 60px;*/
+        width: 80px;
+        height: 80px;
+        justify-content: center;
+        align-items: center;
+        z-index: 1090;
+        background-color: #43676b;
+    }
+    .menu-btn span,
+    .menu-btn span:before,
+    .menu-btn span:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 25px;
+        border-radius: 3px;
+        background-color: #ffffff;
+        position: absolute;
+    }
+    .menu-btn span:before {
+        bottom: 8px;
+    }
+    .menu-btn span:after {
+        top: 8px;
+    }
+    #menu-btn-check:checked ~ .menu-btn span {
+        background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+    }
+    /*線をばってんにする*/
+    #menu-btn-check:checked ~ .menu-btn span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    #menu-btn-check:checked ~ .menu-btn span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+    #menu-btn-check {
+        display: none;
+    }
+
+    /*メニューコンテンツ*/
+    .menu-content {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: 100%;/*leftの値を変更してメニューを画面外へ*/
+        z-index: 1080;
+        background-color: #43676b;
+        transition: all 0.5s;/*アニメーション設定*/
+    }
+    .menu-content ul li a {
+        display: block;
+        width: 100%;
+        font-size: 25px;
+        font-family: serif;
+        box-sizing: border-box;
+        color:#ffffff;
+        text-decoration: none;
+        position: relative;
+    }
+
+    #menu-btn-check:checked ~ .menu-content {
+        right: 0;/*メニューを画面内へ*/
+    }
+
+    .btn:active ~ .menu-content{
+        right: 100%;
+    }
+
+
+
+    /* メニューコンテンツ */
+    .menu_contents1{
+        width: 50%;
+        display: flex;
+        margin: auto;
+        margin-top: 20%;
+    }
+    .menu_contents2{
+        list-style: none;
+        writing-mode: vertical-rl;
+        margin: auto;
+    }
+
+    /*左帯*/
+    .hidari{
+        width: 100%;
+        height: 80px;
+        border-right:solid 1px black;
+        background-color: #478384;
+        display: table;
+        z-index: 1000;
+    }
+    .title{
+        color: white;
+        font-family: 'HGP行書体';
+        text-align: center;
+        margin: auto;
+        writing-mode: horizontal-tb;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+
+
+
+
+
+
+
+
+
+    /*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ メインコンテンツ ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+    main{
+        grid-area: main;
+        margin: 0;
+    }
+
+
+    /*＝＝＝＝スライドショー＝＝＝＝*/
+    .size{
+        width: 100%;
+        height: auto;
+    }
+
+
+    /*＝＝＝＝パララックス設定＝＝＝＝*/
+    .parallax-bg1 {
+        height: 180vh;
+        background-image: url('./img/kag1.jpg');
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .parallax-bg2 {
+        height: 200vh;
+        background-image: url('./img/sisi1.jpg');
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    /*スクロールするコンテンツ*/
+    .scrollbox1 {
+        /*background-color: #111;*/
+        background: linear-gradient(#e6cde3,#c67675,#877ba9/*black*/);
+        /*background-size: auto;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;*/
+        height: 930vh;
+    }
+
+    .scrollbox1::before{
+        content: '';
+        background: linear-gradient(#e6cde3,#c67675,#877ba9/*black*/);
+        z-index: 2;
+    }
+
+    .scrollbox2 {
+        /*background: #e6cde3;*/
+        background: linear-gradient(#3e62ad,#83ccd2,#c7dc68);
+
+    }
+
+
+
+    /*＝＝＝＝＝＝ セクション１(代表挨拶) ＝＝＝＝＝＝*/
+    .section1{
+        margin: 0 auto;
+        padding-top: 109px;
+        width: 100%;
+        position: relative;
+    }
+
+    .title1-1{
+        width: 100%;
+        display: block;
+    }
+
+    .title1-1-1{
+        width: 100%;
+    }
+
+    .title1-2{
+        width: 97%;
+        margin-top: 10%;
+    }
+
+    .title1-3{
+        width: 100%;
+        font-size: 920%;
+        font-family: 'HGP行書体';
+    }
+
+    .section1 p{
+        width: 90%;
+        margin: auto;
+        margin-top: 5%;
+        font-size: 140%;
+        font-family: sans-serif;
+        line-height: 1.7
+    }
+
+
+    /*＝＝＝＝＝＝ セクション２(ポスター) ＝＝＝＝＝＝*/
+    .section2{
+        margin: 0 auto;
+        margin-top: 20%;
+        width: 100%;
+        position: relative;
+    }
+
+    .photo2-1{
+        width: 50%;
+        display: flex;
+    }
+
+    .photo2-2{
+        width: auto;
+        height: 30%;
+        top: 5%;
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+        -webkit-writing-mode: vertical-rl;
+        color: white;
+        position: relative;
+        z-index: 2;
+        font-family: serif;
+        font-size: 26px;
+        letter-spacing: 0.2em;
+    }
+
+    .photo2-1::after{
+        position: absolute;
+        background-color: #e42d1d;
+        left: -9.0%;
+        width: 44.7%;
+        height: 17%;
+        content: '';
+        z-index: 1;
+    }
+
+    .photo2-3{
+        width: 85%;
+        position: relative;
+        top: 5%;
+        z-index: 2;
+    }
+
+    .photo2-4{
+        width: 50%; 
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .photo2-5{
+        width: 35%;
+        margin-bottom: 5%;
+        margin-left: auto;
+    }
+
+    .sec2-tx1{
+        margin-top: auto;
+        font-size: 150%;
+    }
+
+    .sec2-tx2{
+        width: 80%;
+        margin: 5%;
+        margin-top: 3%;
+        padding: 5%;
+        text-align: center;
+    }
+
+    .sec2-tx3{
+        margin: auto;
+        width: 50%;
+        top: 0px;
+    }
+
+
+    /*見出し*/
+    .decor2-1{
+        background: #d6e9ca;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+    }
+
+    .decor2-2 {
+        font-size: 200%;
+        text-decoration: underline;
+        padding-left: 40%;
+        position: relative;
+        display: inline-block;
+        margin: 150px 0;
+        z-index: 1;
+    }
+
+    .decor2-2:before {
+        content: "";
+        position: absolute;
+        background: #7ebeab;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        z-index: -1;
+    }
+
+
+
+
+    /*＝＝＝＝＝＝ セクション３(SNS関係) ＝＝＝＝＝＝*/
+    .section3{
+        margin: 0 auto;
+        margin-top: 30%;
+        margin-bottom: -10%;
+        width: 100%;
+        height: 250vh;
+        position: relative;
+    }
+
+    .video1-1{
+        font-family: serif;
+        font-size: 150%;
+    }
+
+    .video1-2{
+        font-family: serif;
+        font-size: 200%;
+        text-align: center;
+    }
+
+
+    .video2-1{
+        display: flex;
+        height: 25%;
+        margin-top: 10%;
+    }
+
+    .video2-2{
+        width: 35%;
+        height: 40%;
+        margin: 2%;
+        margin-top: 6%;
+    }
+
+    .video2-3{
+        font-family: serif;
+        font-size: 220%;
+        text-align: center;
+        border-bottom: solid;
+    }
+
+    .video3{
+        width: 65%;
+        height: 100%;
+    }
+
+    /*アカウント*/
+
+    /* ボタン全体の装飾 */
+    .flowbtn4{
+        font-family:'Trebuchet MS',sans-serif;/* フォント設定あとでやる */
+        border-radius:50%;
+        display:inline-block;
+        width:150px;
+        height:150px;
+        font-size:30px;
+        transition:.5s;
+        text-decoration:none;
+    }
+    /* ボタンマウスホバー時テキストカラー */
+    .flowbtn4:hover{
+        color:#fff!important;
+    }
+    /* Twitter */
+    .flowbtn4.fl_tw2{
+        border:solid 1px #55acee;
+        color:#55acee;
+    }
+    /* Twitterマウスホバー時 */
+    .flowbtn4.fl_tw2:hover{
+        border:solid 1px #55acee;
+        background:#55acee;
+    }
+    /* Instagram */
+    .flowbtn4.insta_btn2 {
+        border:solid 1px #c6529a;
+        color:#c6529a;
+    }
+    /* Instagramマウスホバー時 */
+    .flowbtn4.insta_btn2:hover{
+        border:solid 1px #c6529a;
+        background:#c6529a;
+    }
+    /* YouTube */
+    .flowbtn4.fl_yu2{
+        border:solid 1px #fc0d1c;
+        color:#fc0d1c;
+    }
+    /* YouTubeマウスホバー時 */
+    .flowbtn4.fl_yu2:hover{
+        border:solid 1px #fc0d1c;
+        background:#fc0d1c;
+    }
+    /* ボタン内テキスト調整 */
+    .flowbtn4 div{
+        font-size:14px;	
+        font-weight:bold;
+        position:relative;
+        bottom:0px;		
+    }
+    /* ulタグの内側余白を０にする */
+    ul.snsbtniti{
+        margin-top: 80vh;
+        width: 75%;
+        padding:0!important;
+        list-style-type:none!important;
+    }
+    /* ボタンの位置 */
+    .snsbtniti{
+        display:flex;
+        flex-flow:row wrap;
+        justify-content:space-between;
+    }
+    /* ボタン同士の余白 */
+    .snsbtniti li{
+        flex:0 0 33%;
+        text-align:center!important;
+    }
+
+
+
+
+    /*＝＝＝＝＝＝ セクション４(演目紹介) ＝＝＝＝＝＝*/
+    .section4{
+        margin: 0 auto;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        width: 100%;
+        position: relative;
+        background-color: black;
+        /*#e6cde3  #44617b*/
+    }
+
+    .section4 h3{
+        width: 70%;
+        margin: auto;
+        line-height: 200%;
+        font-family: serif;
+    }
+
+    /*＝＝＝＝＝＝＝＝＝＝ 演目紹介のスライドショー ＝＝＝＝＝＝＝＝＝＝*/
+    .slider{
+        margin: auto;
+        list-style: none;
+        padding-left: 1px;
+        text-align: center;
+    }
+
+    .slider1{
+        height: 100%;
+        margin: auto;
+        list-style: none;
+        padding-left: 1px;
+        text-align: center;
+    }
+
+    .size{
+        width: 100%;
+        height: auto;
+    }
+
+
+    .section4-2{
+        width: 100%;
+        display: flex;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .section4-2 h1{
+        font-size: 80px;
+        font-family: serif;
+        text-align: center;
+    }
+    .copy1-1{
+        width: 30%;
+        /*background-color: #7a4171;*/
+        /*background-color: #274a78;*/
+        background-color: black;
+        color: white;
+    }
+    .copy1-1 a h3:hover{
+        color: #abced8;
+    }
+
+    .copy1-2{
+        width: 85%;
+        margin: auto;
+        text-align: center;
+        font-family: serif;
+    }
+
+    .pic1{
+        width: 70%;
+    }
+
+
+
+
+
+    /*＝＝＝＝＝＝ セクション５(カレンダー) ＝＝＝＝＝＝*/
+    .section5{
+        width: 65%;
+        margin: auto;
+        margin-top: 5%;
+    }
+
+    .g-calendar{
+        height: 50%;
+    }
+
+    .calendar1{
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .calendar2{
+        border-top: solid 1px black;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+        list-style: none;
+    }
+
+    .calendar3{
+        padding: 1rem 2rem;
+        border-left: 4px solid #000;
+        font-size: 230%;
+    }
+
+
+
+
+
+    /*＝＝＝＝＝＝ セクション６(保存会) ＝＝＝＝＝＝*/
+    .section6{
+        width: 100%;
+        margin: auto;
+        margin-top: 15%;
+    }
+
+    .hozonkai1{
+        list-style: none;
+        padding-left: 0px;
+        border-top: solid 1px;
+    }
+
+    .hozonkai2{
+        display: flex;
+        border-bottom: solid 1px;
+        padding: 2%;
+    }
+
+    .hozonkai3{
+        margin-left: 3%; 
+        margin-right: auto;
+        width: 65%;
+    }
+
+    .hozonkai4{
+        width: 100%;
+        display: flex;
+        justify-content:space-between;
+    }
+
+    .photo6-1{
+        width: 30%;
+    }
+
+    .photo6-2{
+        width: 100%;
+        height: auto;
+    }
+
+    /*SNSアイコン*/
+    .flowbtn4-2{
+        font-family:'Trebuchet MS',sans-serif;/* フォント設定あとでやる */
+        border-radius:50%;
+        display:inline-block;
+        width:150px;
+        height:150px;
+        font-size:30px;
+        transition:.5s;
+        text-decoration:none;
+    }
+    /* ボタンマウスホバー時テキストカラー */
+    .flowbtn4-2:hover{
+        color:#fff!important;
+    }
+    /* Twitter */
+    .flowbtn4-2.fl_tw2-2{
+        border:solid 1px #55acee;
+        color:#55acee;
+    }
+    /* Twitterマウスホバー時 */
+    .flowbtn4-2.fl_tw2-2:hover{
+        border:solid 1px #55acee;
+        background:#55acee;
+    }
+    /* Facebook */
+    .flowbtn4-2.fl_fb2-2{
+        border:solid 1px #3b5998;
+        color:#3b5998;
+    }
+    /* Facebookマウスホバー時 */
+    .flowbtn4-2.fl_fb2-2:hover{
+        border:solid 1px #3b5998;
+        background:#3b5998;
+    }
+    /* YouTube */
+    .flowbtn4-2.fl_yu2-2{
+        border:solid 1px #fc0d1c;
+        color:#fc0d1c;
+    }
+    /* YouTubeマウスホバー時 */
+    .flowbtn4-2.fl_yu2-2:hover{
+        border:solid 1px #fc0d1c;
+        background:#fc0d1c;
+    }
+    /* ボタン内テキスト調整 */
+    .flowbtn4-2 div{
+        font-size:14px;	
+        font-weight:bold;
+        position:relative;
+        bottom:0px;		
+    }
+    /* ulタグの内側余白を０にする */
+    ul.snsbtniti-2{
+        padding:0!important;
+        list-style-type:none!important;
+    }
+    /* ボタンの位置 */
+    .snsbtniti-2{
+        margin: auto;
+    }
+    /* ボタン同士の余白 */
+    .snsbtniti-2 li{
+        flex:0 0 33%;
+        text-align:center!important;
+    }
+
+
+    /*＝＝＝＝＝＝ セクション７(アクセス) ＝＝＝＝＝＝*/
+    .section7{
+        width: 100%;
+        margin: auto;
+        margin-top: 20%;
+    }
+
+    .photo7-1{
+        width: 100%;
+    }
+
+    .title7-1{
+        width: auto;
+        font-size: 200%;
+    }
+
+
+
+    /*＝＝＝＝＝＝＝＝ go to top ＝＝＝＝＝＝＝＝＝＝*/
+    .get-top1{
+        width: auto;
+        margin-top: 10%;
+    }
+
+    .get-top2{
+        position: absolute;
+        margin-left: 40%;
+        color: white;
+    }
+
+    #page_top{
+        width: 100%;
+        height: 100px;
+        background: #3f98ef;
+        opacity: 0.6;
+    }
+
+    #page_top a{
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+    }
+
+
+
+
+
+
+
+
+    /*＝＝＝＝＝＝＝＝＝＝＝＝＝ フッター ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+    #lineup-footer{
+        margin-left: 0;
+        background-color: #000;
+        color: white;
+        grid-area: footer;
+    }
+
+    #lineup-footer a:hover{
+        color: #3f98ef;
+    }
+
+    #sitemap{
+        margin: auto;
+    }
+
+    #sitemap1{
+        margin-top: 5%;
+    }
+
+    #sitemap2{
+        width: 70%;
+        height: 100%;
+        margin: auto;
+        margin-top: 5%;
+        list-style: none;
+        padding-left: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #sitemap2 a{
+        width: 25%;
+        color: white;
+    }
+
+    .url{
+        text-decoration: none;
+        color: #89c3eb;
+    }
+
+
+    /*==== アイコン =====*/
+
+    /* ボタン全体 */
+    .flowbtn11{
+    font-family:'Verdana',sans-serif;	
+    border-radius:4px;
+    position:relative;
+    display:inline-block;
+    width:90%;
+    font-size:20px;
+    color:#fff!important;
+    text-decoration:none;
+    margin-bottom:5px;
+    }
+    /* Twitter */
+    .fl_tw1{
+    background:#55acee;
+    }
+    /* Instagramアイコン位置 */
+    .insta_btn11 .fa-instagram{
+    position:relative;
+    z-index:1;	
+    }
+    /* Instagram紫グラデ背景色 */
+    .insta_btn11{
+    background:-webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+    background:linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+    overflow:hidden;
+    }
+    /* Instagramオレンジグラデ背景色 */
+    .insta_btn11:before{
+    content: '';
+    position:absolute;
+    top:17px;
+    left:-75px;
+    width:100%;
+    height:100%;
+    background:-webkit-radial-gradient(#ffdb2c 5%, rgba(255, 105, 34, 0.65) 45%, rgba(255, 88, 96, 0) 80%);
+    background:radial-gradient(#ffdb2c 5%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 80%);
+    }
+    /* YouTube */
+    .fl_yu1{
+    background:#fc0d1c;
+    }
+    /* アイコンボタンホバー時 */
+    .flowbtn11:hover span{
+        -webkit-transform: rotateX(360deg);
+        -ms-transform: rotateX(360deg);
+        transform: rotateX(360deg);
+        text-decoration:none;
+    }
+    /* ボタン内テキスト調整 */
+    .flowbtn11 span{
+        font-size:14px;	
+        position:relative;
+        left:8px;
+        bottom:2px;
+        transition:.6s;	
+        display:inline-block;	
+    }
+    /* ulタグの内側余白を０にする */
+    ul.snsbtniti2{
+        width: 30%;
+        margin: auto;
+        margin-top: 10%;
+        padding:0!important;
+        list-style-type:none!important;
+    }
+    /* アイコンボタン同士の余白調整 */
+    .snsbtniti2 li{
+        flex:0 0 48%;
+        text-align:center!important;
+        margin-top: 30px;
+    }
+}
