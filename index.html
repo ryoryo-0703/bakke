@@ -1,0 +1,837 @@
+<!-- 
+
+    岩手大学民俗芸能サークルばっけ　
+    
+    公式ホームページ 
+    
+    完成版 
+
+    ・画像のパス
+    ・リンクの互換性チェック
+    ・slickの動作が重くならないか
+    ・画像ディレクトリのサイズ
+    ・著作権
+    ・URL取得
+    ・まれにアニメーションのバグあり
+-->
+
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>岩手大学民俗芸能サークルばっけ 公式ホームページ</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="responsive.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link rel="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+        <link rel="stylesheet" type="text/css" href="./js/slick.css">
+        <link rel="stylesheet" type="text/css" href="./js/slick-theme.css">
+        <script src="./js/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="./js/slick.min.js"></script>
+
+    </head>
+
+    <body>
+        <!-- スライドメニュー -->
+        <nav>
+            <div class="hamburger-menu">
+                <input type="checkbox" id="menu-btn-check">
+                <label for="menu-btn-check" class="menu-btn"><span></span></label>
+                <div class="hidari">
+                    <h1 class="title">岩手大学　　民俗芸能さぁくる ばっけ</h1>
+                </div>
+                <!--ここからメニュー-->
+                <div class="menu-content">
+                    <ul class="menu_contents1">
+                        <li class="menu_contents2"><a href="#">ホーム</a></li>
+                        <li class="menu_contents2"><a href="#intro">サークル紹介</a></li>
+                        <li class="menu_contents2"><a href="#sns">SNS</a></li>
+                        <li class="menu_contents2"><a href="introduce.html">演目紹介</a></li>
+                        <li class="menu_contents2"><a href="#schedule">活動日程</a></li>
+                        <li class="menu_contents2"><a href="#preservation_society">保存会</a></li>
+                        <li class="menu_contents2"><a href="#access">アクセス</a></li>
+                    </ul>      
+                </div>
+                <!--ここまでメニュー-->
+            </div>
+        </nav>
+        
+        <main>
+            <!--スライドショー-->
+            <ul class="slider">
+                <li><img src="./img/san5.jpg" alt="" class="size"></li>
+                <li><img src="./img/kag5.jpg" alt="" class="size"></li>
+                <li><img src="./img/naka4.jpg" alt="" class="size"></li>
+                <li><img src="./img/sisi5.jpg" alt="" class="size"></li>
+                <li><img src="./img/all1.jpg" alt="" class="size"></li>
+                <a href="#tandoku"><li><img src="./img/3nen5.png" alt="" class="size"></li></a>
+                <a href="#tandoku"><li><img src="./img/3nen6.png" alt="" class="size"></li></a>
+            </ul>
+
+            <script src="./js/slick.js"></script>
+            <script>
+                $(document).ready(function(){
+                    $('.slider').slick({
+                        dots: true,
+                        autoplay: true,
+                        autoplaySpeed: 2000,
+                        speed: 1500,
+                    });
+                });
+            </script>
+
+
+            <!--スクロールコンテンツ１-->
+            <div class="scrollbox1">
+                <!-- あいさつ -->
+                <section class="section1">
+
+                    <div style="margin:auto; width: 80%;">
+                        <p style="text-align: center;">
+                            　こちらのWEBサイトは、HTML5、CSS3、およびJavaScript、jQueryでコーディングしたものです。
+                            　未完成でありながら公開に踏み出しましたため、不備があるかと思いますが、ご了承ください。<br>
+                            また、スマートフォン対応デザインは作成中ですので、<span style="color: red;">パソコンでの閲覧をお願い致します。</span><br>
+                            　尚、写真をふんだんに使っております。<br>　使用不可の写真や、もし映り込んでいた写真を見つけ、使用をやめてほしい
+                            という要望がございましたら、Twitter、Instagramもしくは以下のメールアドレスまでメッセージをお寄せください。<br><br>
+    
+                            bakke.iwateuni@gmail.com<br>
+                            s0620010@iwate-u.ac.jp<br>
+                        </p>
+                    </div>
+
+                    <div class="title1-1">
+                        <div class="title1-1-1">
+                            <img src="./img/HPロゴ_20220610170740.PNG" alt="" class="title1-2">
+                        </div>
+                        <div class="title1-1-1">
+                            <div style="width: 100%;">
+                                <div>
+                                    <h1 style="margin-top: 15%; text-align: center;" id="intro">ばっけ紹介(代表挨拶)</h1>
+                                    <p>
+                                        　岩手大学民俗芸能サークルばっけでは県内外7つの演目に取り組んでいます。
+                                        取り組んでいる演目の詳細については後ほどご紹介しています。
+                                        ちなみに民俗芸能とは、民間の風俗・習慣・信仰に根ざして伝承されてきた芸能のことです。
+                                        皆さんは民俗芸能についてどんなことを思うでしょうか？私たち大学生のような若い世代の中には、民俗芸能は堅苦しくて難しいものだと思う方が多いかもしれません。
+                                        もちろん、伝統を引き継ぐ責任はありますが、それ以上に踊ることの楽しさや仲間と共に作りあげる喜びを得られる素晴らしいものだと思っています。
+                                        そんな民俗芸能の素晴らしさや楽しさを、私たちの活動を通してより多くの若者に伝え、そして人々と民俗芸能の架け橋となれるよう、民俗芸能サークルばっけは日々の練習に取り組んでいます。
+                                        若者が民俗芸能に感じる敷居の高さを少しでも解消できれば幸いです。<br>
+                                        　あなたも私たちと一緒に民俗芸能に取り組んでみませんか？身構える必要はありません！部員の多くは民俗芸能未経験者なのでスタートラインは同じです。
+                                        ぜひ気軽に体験しに来てくださいね！部員一同、お待ちしております！<br>
+                                        <span><p style="text-align: right;">第25代 代表 伊藤千穂</p></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </section>
+            
+                <!-- ポスター -->
+                <section class="section2">
+                    <div class="decor2-1">
+                        <h2 class="decor2-2" id="performance">単独公演</h2>
+                    </div>
+                    <div style="display: flex; margin-top: 5%;">
+                        <div class="photo2-1">
+                            <h3 class="photo2-2">毎年開催</h3>
+                            <img src="./img/pos2.jpg" alt="画像" class="photo2-3">
+                        </div>
+                        <div class="photo2-4">
+                            <img src="./img/pos18th.jpg" alt="画像" class="photo2-5">
+                            <img src="./img/pos19th.jpg" alt="画像" class="photo2-5">
+                            <img src="./img/pos20th.jpg" alt="画像" class="photo2-5">
+                            <img src="./img/pos21th.jpg" alt="画像" class="photo2-5">
+                        </div>
+                    </div>
+                    <h1 class="sec2-tx2">ばっけ 単独公演ポスター</h1>
+
+                    <div class="sec2-tx1">
+                        <div class="decor2-1">
+                            <h2 class="decor2-2" id="history">沿革</h2>
+                        </div>
+                        <div style="display: flex;">
+                            <div style="width: 50%; margin: auto;">
+                                <p>
+                                    ● 創設年<br>平成９年　結成<br><br>
+                                    ● 年間の活動内容<br>
+                                    10月<br> 大学祭「不来方祭」にてステージ発表<br>
+                                    11月<br> 単独公演(郷土芸能発表会)<br>
+                                    その他、外部からの依頼があれば随時対応。<br><br>
+                                    ● 通常の活動<br>
+                                    週３回の定期練習に加え、各演目それぞれの保存会の練習に参加。<br>
+                                </p>
+                            </div>
+                            <div class="sec2-tx3">
+                                <p>●過去の活動</p>
+                                <!--平成28年-->
+                                <details style="border-bottom: solid 1px black;">
+                                    <summary>平成28年</summary>
+                                    <div style="display: flex; flex-direction: row;">
+                                        <diV style="width: 50px;">4月</diV>
+                                        <div style="display: flex; flex-direction: column; margin-left: 5%;">
+                                            <div>盛岡環境緑花まつり</div>
+                                            <div>とくたんの卿</div>
+                                        </div>
+                                    </div>
+                                    <div style="display: flex; flex-direction: row;">
+                                        <diV style="width: 50px;">6月</diV>
+                                        <div style="display: flex; flex-direction: column; margin-left: 5%;">
+                                            <div>こずかたの郷</div>
+                                        </div>
+                                    </div>
+                                    <div style="display: flex; flex-direction: row;">
+                                        <diV style="width: 50px;">8月</diV>
+                                        <div style="display: flex; flex-direction: column; margin-left: 5%;">
+                                            <div>上田祭り</div>
+                                            <div>ニチイ矢幅</div>
+                                        </div>
+                                    </div>
+                                    <div style="display: flex; flex-direction: row;">
+                                        <diV style="width: 50px;">9月</diV>
+                                        <div style="display: flex; flex-direction: column; margin-left: 5%;">
+                                            <div>ふれあいランド岩手・ふれあいまつり神楽大会</div>
+                                            <div>第70回盛岡建設労働組合家族慰安芸能祭</div>
+                                            <div>ジャパンケア</div>
+                                        </div>
+                                    </div>
+                                    <div style="display: flex; flex-direction: row;">
+                                        <div style="width: 50px;">12月</diV>
+                                        <div style="display: flex; flex-direction: column; margin-left: 5%;">
+                                            <div>盛岡市立地域福祉愛護センター クリスマス会忘年会</div>
+                                            <div>岩手大学院農学研究科国際シンポジウム</div>
+                                            <div>介護施設　優久苑</div>
+                                        </div>
+                                    </div>
+                                </details>
+                                <!--平成29年-->
+                                <details style="border-bottom: solid 1px black;">
+                                    <summary>平成29年</summary>
+                                    <div style="display: flex; flex-direction: row;">
+                                        <diV style="width: 50px;">3月</diV>
+                                        <div style="display: flex; flex-direction: column; margin-left: 5%;">
+                                            <div>デイサービスセンター 五月園</div>
+                                        </div>
+                                    </div>
+                                    <div style="display: flex; flex-direction: row;">
+                                        <diV style="width: 50px;">4月</diV>
+                                        <div style="display: flex; flex-direction: column; margin-left: 5%;">
+                                            <div>盛岡市先人記念館 春いろいろイベント</div>
+                                            <div>もりおか環境緑花まつり</div>
+                                        </div>
+                                    </div>
+                                    <div style="display: flex; flex-direction: row;">
+                                        <diV style="width: 50px;">7月</diV>
+                                        <div style="display: flex; flex-direction: column; margin-left: 5%;">
+                                            <div>盛岡グランドホテル</div>
+                                        </div>
+                                    </div>
+                                    <div style="display: flex; flex-direction: row;">
+                                        <diV style="width: 50px;">8月</diV>
+                                        <div style="display: flex; flex-direction: column; margin-left: 5%;">
+                                            <div>岩泉郷土芸能祭</div>
+                                        </div>
+                                    </div>
+                                    <div style="display: flex; flex-direction: row;">
+                                        <diV style="width: 50px;">9月</diV>
+                                        <div style="display: flex; flex-direction: column; margin-left: 5%;">
+                                            <div>神楽大会</div>
+                                            <div>ザ・太鼓</div>
+                                            <div>ニチイ上田</div>
+                                            <div>ジャパンケア盛岡清水</div>
+                                            <div>やさしえ盛岡</div>
+                                        </div>
+                                    </div>
+                                    <div style="display: flex; flex-direction: row;">
+                                        <diV style="width: 50px;">11月</diV>
+                                        <div style="display: flex; flex-direction: column; margin-left: 5%;">
+                                            <div>ジャパンウィークinチェコのプラハ</div>
+                                        </div>
+                                    </div>
+                                    <div style="display: flex; flex-direction: row;">
+                                        <diV style="width: 50px;">12月</diV>
+                                        <div style="display: flex; flex-direction: column; margin-left: 5%;">
+                                            <div>サンセール盛岡</div>
+                                            <div>花巻市勤労青少年ホーム</div>
+                                        </div>
+                                    </div>
+                                </details>
+                                <!--平成30年-->
+                                <details style="border-bottom: solid 1px black;">
+                                    <summary>平成30年</summary>
+                                    <div style="display: flex; flex-direction: row;">
+                                        <diV style="width: 50px;">1月</diV>
+                                        <div style="display: flex; flex-direction: column; margin-left: 5%;">
+                                            <div>やちだもの家</div>
+                                            <div>矢巾郷土芸能祭</div>
+                                        </div>
+                                    </div>
+                                    <div style="display: flex; flex-direction: row;">
+                                        <diV style="width: 50px;">3月</diV>
+                                        <div style="display: flex; flex-direction: column; margin-left: 5%;">
+                                            <div>石鳥谷デイサービスセンター</div>
+                                            <div>デイサービスセンター 五月園</div>
+                                            <div>楽市楽音</div>
+                                        </div>
+                                    </div>
+                                    <div style="display: flex; flex-direction: row;">
+                                        <diV style="width: 50px;">4月</diV>
+                                        <div style="display: flex; flex-direction: column; margin-left: 5%;">
+                                            <div>もりおか環境緑花まつり</div>
+                                            <div>盛岡先人記念館</div>
+                                        </div>
+                                    </div>
+                                    <div style="display: flex; flex-direction: row;">
+                                        <diV style="width: 50px;">6月</diV>
+                                        <div style="display: flex; flex-direction: column; margin-left: 5%;">
+                                            <div>岩手大学開学記念行事</div>
+                                        </div>
+                                    </div>
+                                    <div style="display: flex; flex-direction: row;">
+                                        <diV style="width: 50px;">7月</diV>
+                                        <div style="display: flex; flex-direction: column; margin-left: 5%;">
+                                            <div>ふれあい昼食会in上田公民館ホール</div>
+                                            <div>デイサービスセンター　八百石</div>
+                                            <div>「おばんですいわて」にてばっけの特集が放送</div>
+                                        </div>
+                                    </div>
+                                    <div style="display: flex; flex-direction: row;">
+                                        <diV style="width: 50px;">8月</diV>
+                                        <div style="display: flex; flex-direction: column; margin-left: 5%;">
+                                            <div>盛岡さんさ踊りにて三本柳さんさおどり保存会に参加</div>
+                                            <div>青少年郷土芸能フェスティバルにて　三本柳さんさ踊り保存会に参加</div>
+                                        </div>
+                                    </div>
+                                    <div style="display: flex; flex-direction: row;">
+                                        <diV style="width: 50px;">9月</diV>
+                                        <div style="display: flex; flex-direction: column; margin-left: 5%;">
+                                            <div>ふれあいランド岩手・ふれあいまつり</div>
+                                            <div>ジャパンケア盛岡清水</div>
+                                        </div>
+                                    </div>
+                                </details>
+                                <!--令和元年-->
+                                <details style="border-bottom: solid 1px black;">
+                                    <summary>令和元年</summary>
+                                    <div>パンフレットを作らなかったため不明</div>
+                                </details>
+                                <!--令和2年-->
+                                <details style="border-bottom: solid 1px black;">
+                                    <summary>令和2年</summary>
+                                    <div style="display: flex; flex-direction: row;">
+                                        <diV style="width: 50px;">9月</diV>
+                                        <div style="display: flex; flex-direction: column; margin-left: 5%;">
+                                            <div>トヨタカローラ岩手　ドキドキフェア</div>
+                                            <div>櫻山神社への奉納にて澤目獅子保存会に参加</div>
+                                            <div>同じく、三本柳さんさ保存会に参加</div>
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            
+                <!-- SNS関係 -->
+                <section class="section3">
+                    <div class="decor2-1">
+                        <h2 class="decor2-2"><p style="width: 400px;" id="sns">ばっけに興味がある方</p></h2>
+                    </div>
+                    <p class="video1-2">
+                        ガンダイニングという岩手大学の公式YouTubeチャンネルの番組に紹介をしていただきました。<br>
+                        以下の動画は、その様子と、毎年開催している単独公演を撮影し、<br>ばっけのYouTubeチャンネルにアップロードしたものです。<br>
+                        普段の活動の様子をもっと知りたい方は、各種SNS（Twitter、Instagram、YouTube）<br>もチェックしてみてください。
+                    </p>
+                    <div class="video2-1">
+                        <div class="video2-2">
+                            <h2 class="video2-3">ガンダイニング</h2>
+                        </div>
+                        <div class="video3">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/vAGB-fEJcmY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div style="height: 6%;"></div>
+                    <div class="video2-1">
+                        <div class="video3">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/QplnV7tf_Ys" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="video2-2">
+                            <h2 class="video2-3">郷土芸能発表会</h2>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+
+            <!--パララックスにおける固定背景部分-->                
+            <div class="parallax-bg1">
+                <div style="display: flex; justify-content: space-around;">
+                    <ul class="snsbtniti">
+                        <li><a href="https://twitter.com/bakke_san" class="flowbtn4 fl_tw2"><i class="fab fa-twitter fa-3x" style="margin-top: 15px;"></i><div style="font-size: 75%;">Twitter</div></a></li>
+                        <li><a href="https://www.instagram.com/bakke_san/?utm_medium=copy_link" class="flowbtn4 insta_btn2"><i class="fab fa-instagram fa-3x" style="margin-top: 15px;"></i><div style="font-size: 75%;">Instagram</div></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCvCW6kf3ggdNJmAyQeH2btA?app=desktop" class="flowbtn4 fl_yu2"><i class="fab fa-youtube fa-3x" style="margin-top: 15px;"></i><div style="font-size: 75%;">YouTube</div></a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!--スクロールコンテンツ２-->
+            <div class="scrollbox2">
+                <!-- 演目紹介 -->
+                <section class="section4" id="program">
+                    <div>
+                        <!-- タイトル -->
+                        <section class="section4-2">
+                            <div class="copy1-1">
+                                <h1><a href="introduce.html" target="_blank" class="link">演目紹介</a></h1>
+                                <div class="copy1-2">
+                                    　私たちが取り組んでいる県内四演目、岩手県外三演目、計七演目の紹介。 
+                                    平成31年度入学の部員が作成したサークル誌「繋」でも詳しくご覧いただけます。<br>
+                                    　演目紹介用のサイトで詳しく紹介しております。
+                                </div>
+                            </div>
+                            <div class="pic1">
+                                <ul class="slider1">
+                                    <a href="./introduce.html"><li><img src="./img/san5.jpg" alt="" class="size"></li></a>
+                                    <a href="./introduce.html"><li><img src="./img/kag5.jpg" alt="" class="size"></li></a>
+                                    <a href="./introduce.html"><li><img src="./img/naka4.jpg" alt="" class="size"></li></a>
+                                    <a href="./introduce.html"><li><img src="./img/sisi5.jpg" alt="" class="size"></li></a>
+                                </ul>
+                            </div>
+                        </section>
+        
+                        <div class="layout">
+                            <!-- さんさ踊り -->
+                            <section class="section4-2">
+                                <div class="pic1">
+                                    <ul class="slider1">
+                                        <a href="introduce.html #sansa" target="_blank"><li><img src="./img/単独2021/さんさ横写/LINE_ALBUM_2021単独ステージ発表_220523_488.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #sansa" target="_blank"><li><img src="./img/単独2021/さんさ横写/LINE_ALBUM_2021単独ステージ発表_220523_258.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #sansa" target="_blank"><li><img src="./img/単独2021/さんさ横写/LINE_ALBUM_2021単独ステージ発表_220523_271.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #sansa" target="_blank"><li><img src="./img/単独2021/さんさ横写/LINE_ALBUM_2021単独ステージ発表_220523_496.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #sansa" target="_blank"><li><img src="./img/単独2021/さんさ横写/LINE_ALBUM_2021単独ステージ発表_220523_497.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #sansa" target="_blank"><li><img src="./img/単独2021/さんさ横写/LINE_ALBUM_2021単独ステージ発表_220523_493.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #sansa" target="_blank"><li><img src="./img/単独2021/さんさ横写/LINE_ALBUM_2021単独ステージ発表_220523_504.jpg" alt="" class="size"></li></a>
+                                    </ul>
+                                </div>
+                                <div class="copy1-1">
+                                    <a href="introduce.html #sansa" target="_blank" style="text-decoration: none; color: white;">
+                                    <img src="./img/透過ロゴ_さんさ_赤字.png" alt="" style="width: 100%;">
+                                    <h3>　岩手県盛岡市三本柳地区に伝わる。統一さんさとは違った輪踊りの「伝統さんさ」。
+                                        沈み、跳び、回り、唱い、躍動感にあふれる。
+                                    </h3>
+                                    </a>
+                                </div>
+                            </section>
+        
+                            <!-- 獅子踊り -->
+                            <section class="section4-2">
+                                <div class="copy1-1">
+                                    <a href="introduce.html #sisi" target="_blank"  style="text-decoration: none; color: white;">
+                                        <img src="./img/透過ロゴ_獅子_赤字.png" alt="" style="width: 100%;">
+                                        <h3>　300年以上前から盛岡市手代森地区に伝わる「幕踊り系」の獅子踊り。仏教の流れを汲んでおり、静と動を併せ持つ獅子は神秘と
+                                            生命を感じさせる。
+                                        </h3>
+                                    </a>
+                                </div>
+                                <div class="pic1">
+                                    <ul class="slider1">
+                                        <a href="introduce.html #sisi" target="_blank"><li><img src="./img/単独2021/獅子横写/LINE_ALBUM_2021単独ステージ発表_220523_29.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #sisi" target="_blank"><li><img src="./img/単独2021/獅子横写/LINE_ALBUM_2021単独ステージ発表_220523_36.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #sisi" target="_blank"><li><img src="./img/単独2021/獅子横写/LINE_ALBUM_2021単独ステージ発表_220523_61.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #sisi" target="_blank"><li><img src="./img/単独2021/獅子横写/LINE_ALBUM_2021単独ステージ発表_220523_30.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #sisi" target="_blank"><li><img src="./img/単独2021/獅子横写/LINE_ALBUM_2021単独ステージ発表_220523_57.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #sisi" target="_blank"><li><img src="./img/単独2021/獅子横写/LINE_ALBUM_2021単独ステージ発表_220523_229.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #sisi" target="_blank"><li><img src="./img/単独2021/獅子横写/LINE_ALBUM_2021単独ステージ発表_220523_218.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #sisi" target="_blank"><li><img src="./img/単独2021/獅子横写/LINE_ALBUM_2021単独ステージ発表_220523_219.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #sisi" target="_blank"><li><img src="./img/単独2021/獅子横写/LINE_ALBUM_2021単独ステージ発表_220523_49.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #sisi" target="_blank"><li><img src="./img/単独2021/獅子横写/LINE_ALBUM_2021単独ステージ発表_220523_233.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #sisi" target="_blank"><li><img src="./img/単独2021/獅子横写/LINE_ALBUM_2021単独ステージ発表_220523_246.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #sisi" target="_blank"><li><img src="./img/単独2021/獅子横写/LINE_ALBUM_2021単独ステージ発表_220523_37.jpg" alt="" class="size"></li></a>
+                                    </ul>
+                                </div>
+                            </section>
+        
+                            <!-- 神楽 -->
+                            <section class="section4-2">
+                                <div class="pic1">
+                                    <ul class="slider1">
+                                        <a href="introduce.html #kagura" target="_blank"><li><img src="./img/単独2021/神楽横写/LINE_ALBUM_2021単独ステージ発表_220523_307.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #kagura" target="_blank"><li><img src="./img/単独2021/神楽横写/LINE_ALBUM_2021単独ステージ発表_220523_99.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #kagura" target="_blank"><li><img src="./img/単独2021/神楽横写/LINE_ALBUM_2021単独ステージ発表_220523_297.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #kagura" target="_blank"><li><img src="./img/単独2021/神楽横写/LINE_ALBUM_2021単独ステージ発表_220523_82.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #kagura" target="_blank"><li><img src="./img/単独2021/神楽横写/LINE_ALBUM_2021単独ステージ発表_220523_303.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #kagura" target="_blank"><li><img src="./img/単独2021/神楽横写/LINE_ALBUM_2021単独ステージ発表_220523_290.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #kagura" target="_blank"><li><img src="./img/単独2021/神楽横写/LINE_ALBUM_2021単独ステージ発表_220523_297.jpg" alt="" class="size"></li></a>
+                                    </ul>
+                                </div>
+                                <div class="copy1-1">
+                                    <a href="introduce.html #kagura" target="_blank" style="text-decoration: none; color: white;">
+                                        <img src="./img/透過ロゴ_神楽_赤字.png" alt="" style="width: 100%;">
+                                        <h3>　岩手県奥州市衣川区に伝わる神楽。古事記の神話「天岩戸」が起源と言われ、鶏を模した衣装と元気な踊りが特徴である。</h3>
+                                    </a>
+                                </div>
+                            </section>
+        
+                            <!-- 中里 -->
+                            <section class="section4-2">
+                                <div class="copy1-1">
+                                    <a href="introduce.html #nakasato" target="_blank" style="text-decoration: none; color: white;">
+                                        <img src="./img/透過ロゴ_中里_赤字.png" alt="" style="width: 100%;">
+                                        <h3>　岩手県岩泉町に伝わる。五穀農譲、家内安全、大漁を祈る勇壮活発な踊り。十種類の道具と役割があり、踊り手たちが
+                                            個性を咲かせる。
+                                        </h3>
+                                    </a>    
+                                </div>
+                                <div class="pic1">
+                                    <ul class="slider1">
+                                        <a href="introduce.html #nakasato" target="_blank"><li><img src="./img/単独2021/中里横写/LINE_ALBUM_2021単独ステージ発表_220523_121.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #nakasato" target="_blank"><li><img src="./img/単独2021/中里横写/LINE_ALBUM_2021単独ステージ発表_220523_112.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #nakasato" target="_blank"><li><img src="./img/単独2021/中里横写/LINE_ALBUM_2021単独ステージ発表_220523_130.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #nakasato" target="_blank"><li><img src="./img/単独2021/中里横写/LINE_ALBUM_2021単独ステージ発表_220523_131.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #nakasato" target="_blank"><li><img src="./img/単独2021/中里横写/LINE_ALBUM_2021単独ステージ発表_220523_186.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #nakasato" target="_blank"><li><img src="./img/単独2021/中里横写/LINE_ALBUM_2021単独ステージ発表_220523_187.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #nakasato" target="_blank"><li><img src="./img/単独2021/中里横写/LINE_ALBUM_2021単独ステージ発表_220523_188.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #nakasato" target="_blank"><li><img src="./img/単独2021/中里横写/LINE_ALBUM_2021単独ステージ発表_220523_194.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #nakasato" target="_blank"><li><img src="./img/単独2021/中里横写/LINE_ALBUM_2021単独ステージ発表_220523_311.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #nakasato" target="_blank"><li><img src="./img/単独2021/中里横写/LINE_ALBUM_2021単独ステージ発表_220523_312.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #nakasato" target="_blank"><li><img src="./img/単独2021/中里横写/LINE_ALBUM_2021単独ステージ発表_220523_328.jpg" alt="" class="size"></li></a>
+                                        <a href="introduce.html #nakasato" target="_blank"><li><img src="./img/単独2021/中里横写/LINE_ALBUM_2021単独ステージ発表_220523_331.jpg" alt="" class="size"></li></a>
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                        
+                        
+        
+                        <!-- その他 -->
+                        <section class="section4-2">
+                            
+                            <div class="pic1">
+                                <ul class="slider1">
+                                    <li><img src="./img/san5.jpg" alt="" class="size"></li>
+                                    <li><img src="./img/kag5.jpg" alt="" class="size"></li>
+                                    <li><img src="./img/naka4.jpg" alt="" class="size"></li>
+                                    <li><img src="./img/sisi5.jpg" alt="" class="size"></li>
+                                </ul>
+                            </div>
+                            <div class="copy1-1">
+                                <h1>県外演目</h1>
+                                <div class="copy1-2">
+                                    上記の県内4演目の他、県外の演目にも取り組む。<br><br>
+                                    北海道民謡「ソーラン節」<br>
+                                    宮城県石巻市「寺崎はねこ踊り」<br>
+                                    熊本県民謡「おてもやん」
+                                </div>
+                            </div>
+                        </section>
+        
+                    </div>
+
+                    <script src="./js/slick.js"></script>
+                    <script>
+                        $(document).ready(function(){
+                            $('.slider1').slick({
+                                dots: false,
+                                autoplay: true,
+                                autoplaySpeed: 2000,
+                                speed: 1500,
+                            });
+                        });
+                    </script>
+
+                </section>
+
+                <!--パララックスにおける固定背景部分-->                
+                <div class="parallax-bg2">
+                    <div style="text-align: center; top: 50%;">
+                        <img src="./img/無題106_20220627011433.PNG" alt="" style="width: 30%; margin-top: 50vh;">
+                    </div>
+                </div>
+
+                <!-- カレンダー -->
+                <section class="section5">
+                    <div class="decor2-1">
+                        <h3 class="decor2-2" id="schedule">活動日程<h2>
+                    </div>
+                    <h1 style="padding-left: 10%; border-bottom: solid 1px;"></h1>
+                    <div class="g-calendar">
+                        <iframe src="https://calendar.google.com/calendar/embed?src=bakke.iwateuni%40gmail.com&ctz=Asia%2FTokyo" style="border:solid 1px #777" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+                    </div>
+                    <ul class="calendar1">
+                        <li class="calendar2">
+                            <h4 class="calendar3">見学・体験会</h4>
+                            <div style="font-size: 150%;">日時：年中参加可能<br>場所：多目的棟<br><br>公式SNSやや知り合いのばっけ部員を通して連絡ください！！<br>きてね！！</div>
+                        </li>
+                        <li class="calendar2">
+                            <h4 class="calendar3">サークルオリエンテーション</h4>
+                            <div style="font-size: 150%;">日時：毎年5月の大学のイベントにて<br>場所：岩手大学(学生センターA棟)<br><br>きてね！！</div>
+                        </li>
+                        <li class="calendar2">
+                            <h4 class="calendar3">さんさ合宿</h4>
+                            <div style="font-size: 150%;">日時：毎年5月<br>場所：岩手山青少年交流の家(テンパーク)<br><br>さんさ練習＆レクリエーション</div>
+                        </li>
+                        <li class="calendar2" style="border-bottom: 1px solid black;" id="tandoku">
+                            <h4 class="calendar3">郷土芸能発表会(単独公演)</h4>
+                            <div style="font-size: 150%;">
+                                <span style="color: red;">※入場制限<br></span>
+                                ・岩手大学の学生及び学内関係者<br>
+                                ・ばっけOB,OGの先輩方<br>
+                                ・ばっけ部員のご家族<br>
+                                ・各演目の保存会の皆さま<br>
+                                ・案内状をお送りさせていただく方々<br><br>
+                                <span style="color: red;">　上記いずれかに該当す方にのみ、事前予約をしていただいたうえで入場可能とさせていただきます。</span><br><br>
+                                ご予約はこちらから <a href="https://t.co/UfQaHMDMeH?s=06">https://t.co/UfQaHMDMeH?s=06</a><br><br><br>
+                                日時：2022年11月6日(日)<br>
+                                　　　10:00　開場<br>
+                                　　　10:30　公演開始<br><br>
+                                場所：河南公民館（盛岡劇場）</div>
+                        </li>
+                    </ul>
+                    <details style="margin-top: 20%;">
+                        <summary style="font-size: 200%;"><span style="border-bottom: 1px solid black;">月ごとのイベント</span></summary>
+                        <li class="calendar2"><h3>4月</h3></li>
+                        <li>高松の池で新入生歓迎会お花見</li>
+                        <li class="calendar2"><h3>5月</h3></li>
+                        <li>さんさ合宿</li>
+                        <li class="calendar2"><h3>6月</h3></li>
+                        <li>演目決め</li>
+                        <li class="calendar2"><h3>7月</h3></li>
+                        <li>演目決め</li>
+                        <li class="calendar2"><h3>8月</h3></li>
+                        <li>演目毎の合宿</li>
+                        <li class="calendar2"><h3>9月</h3></li>
+                        <li>1泊2日BBQ❤</li>
+                        <li>演目毎の合宿</li>
+                        <li class="calendar2"><h3>10月</h3></li>
+                        <li>不来方祭</li>
+                        <li class="calendar2"><h3>11月</h3></li>
+                        <li>単独公演</li>
+                        <li class="calendar2"><h3>12月</h3></li>
+                        <li>3年生引退</li>
+                        <li>踊り納め</li>
+                        <li class="calendar2"><h3>1月</h3></li>
+                        <li>踊り初め</li>
+                        <li class="calendar2"><h3>2月</h3></li>
+                        <li class="calendar2"><h3>3月</h3></li>
+                        <li>追いコン</li>
+                    </details>
+                </section>
+
+                <!-- 保存会 -->
+                <section class="section6">
+                    <div class="decor2-1">
+                        <h2 class="decor2-2" id="preservation_society">保存会</h2>
+                    </div>
+                    <p>
+                        　伝統芸能・民俗芸能の継承に尽力する「保存会」という団体があります。私たち岩手大学民俗芸能サークルばっけは、
+                        各演目ごとに存在する保存会へ参加させていただき、普段の練習で分からない部分や間違っている部分を教えていただく他、
+                        公演や奉納等の前には、完成度を高めるためのご指導をしていただいております。<br>
+                        　奥州、岩泉、寺崎など遠い場合には、長期休業に合宿という形で指導をしていただいています。<br>
+                        　私たちが民俗芸能の活動を出来るのは保存会様のおかげです。大変感謝しておりまます。
+                    </p>
+                    <ul class="hozonkai1">
+                        <li class="hozonkai2">
+                            <div class="photo6-1"><img src="./img/演目紹介用2022/さんさ　演目紹介用2 透過.png" class="photo6-2"></div>                            
+                            <div class="hozonkai3">
+                                <h3>三本柳さんさ踊り保存会</h3>
+                                <h4>岩手県盛岡市三本柳地区</h4>
+                                <p>
+                                    　さんさ踊り発祥の地と云われている盛岡市名須川町三ツ石神社（東顕寺が管理寺）に由来する。
+                                    藩政中期文化文政（1804）のころ、時の藩公（南部利敬）より33種の踊りの伝承を託した一巻の巻物を伝授、
+                                    以来約200年間三本柳の有志で構成した踊り連中により、踊り継がれて今日に至る。
+                                    踊りの伝承形態は「踊り連中」によるもので、当初より依頼行事、門付けを主とした組織で、
+                                    踊りの伝授は相当厳しいものがあったといわれている。
+                                    現在、明治17年頃までの踊り連中の名簿、写真が判明しているが、明治の頃に近隣の村々から指導を乞うわれ教えたといわれている。<br><br>
+                                    参考文献：三本柳さんさ踊り保存会公式ホームページ<a href="http://yanagitusin.web.fc2.com/">http://yanagitusin.web.fc2.com/</a>
+                                </p>
+                                <ul class="snsbtniti-2 hozonkai4">
+                                    <li><a href="https://twitter.com/sanbonyanagi_33" class="flowbtn4-2 fl_tw2-2"><i class="fab fa-twitter fa-3x" style="margin-top: 15px;"></i><div style="font-size: 75%;">Twitter</div></a></li>
+                                    <li><a href="https://ja-jp.facebook.com/sanbonyanagisansa/" class="flowbtn4-2 fl_fb2-2"><i class="fab fa-facebook-f fa-3x" style="margin-top: 15px;"></i><div style="font-size: 75%;">Facebook</div></a></li>
+                                    <li><a href="https://www.youtube.com/channel/UCwlS9pikCINvbNMzSQRJWyQ?app=desktop" class="flowbtn4-2 fl_yu2-2"><i class="fab fa-youtube fa-3x" style="margin-top: 15px;"></i><div style="font-size: 75%;">YouTube</div></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="hozonkai2">
+                            <div class="photo6-1"><img src="./img/演目紹介用2022/獅子　演目紹介用2 改訂版.png" class="photo6-2"></div>                            
+                            <div class="hozonkai3">
+                                <h3>澤目獅子踊り保存会</h3>
+                                <h4>岩手県盛岡市手代森</h4>
+                                <p>
+                                    　澤目獅子踊りは,堂前に伝承されている巻物において、正徳5 年（1715 年）の記述があることから、
+                                    少なくともそれ以前から、盛岡市手代森の沢目地区に、およそ三百年にわたり伝えられている。
+                                    伝承されている巻物には獅子踊りの歌詞を訳した『和合宇多覚』のほか、
+                                    天台宗、真言宗の流れを汲む仏像各種の図解が併記されており、精霊を供養し、悪霊を追い払うものとして、
+                                    古くから舞を回向踊りとして伝承している。踊りは幕踊り系に属し、
+                                    「回向」「庭ならし」から始まり、「七拍子」「雌獅子狂い」などの役踊り「礼踊り」まで
+                                    四十八段落に舞が区切られており、腰を低くした踊りが特徴で、
+                                    力強い太鼓の響きや流れる笛の音とともに獅子らが勇壮に舞う。<br>
+                                    　また、後継者育成においては、次代を担う青少年が伝統芸能を介して地域への関心を高め、
+                                    伝承活動が地域社会とのつながりを深める交流の場となるよう取り組む。
+                                </p>
+                                <ul class="snsbtniti-2" style="display: flex; margin:auto;">
+                                    <li><a href="https://twitter.com/sawame_shishi" class="flowbtn4-2 fl_tw2-2"><i class="fab fa-twitter fa-3x" style="margin-top: 15px;"></i><div style="font-size: 75%;">Twitter</div></a></li>
+                                    <li><a href="https://www.facebook.com/sawame.sisiodori/community/" class="flowbtn4-2 fl_fb2-2"><i class="fab fa-facebook-f fa-3x" style="margin-top: 15px;"></i><div style="font-size: 75%;">Facebook</div></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="hozonkai2">
+                            <div class="photo6-1"><img src="./img/演目紹介用2022/中里ポスター　線画1 透過.png" class="photo6-2"></div>                            
+                            <div class="hozonkai3">
+                                <h3>中里七ツ舞保存会</h3>
+                                <h4>岩手県岩泉町中里地区</h4>
+                                <p>
+                                    　下閉伊郡地方に古くから伝承していた黒森神楽（山伏神楽）で、家々に舞い込む先払いの芸能から風流化した。
+                                    岩手県岩泉町の中里地区に伝わる、五穀豊穣・家内安全・大漁を祈る勇壮活発な踊りで、天照大御神が天から降りくる際の道案内を表す。<br>
+                                    　天保年間から昭和15年頃まで約100年ほど踊り継がれた。
+                                    一度衰退時代が続いたが、昭和63年に復活を遂げ、以来地元の小・中・高等学校の学生を中心に保存伝承に取り組み、今日に至る。<br>
+                                    　岩手大学民俗芸能サークルばっけでは、16年にわたり踊りついでいる。
+                                </p>
+                            </div>
+                        </li>
+                        <li class="hozonkai2">
+                            <div class="photo6-1"><img src="./img/演目紹介用2022/神楽　演目紹介用2.png" class="photo6-2"></div>                            
+                            <div class="hozonkai3">
+                                <h3>大森神楽保存会</h3>
+                                <h4>岩手県奥州市衣川</h4>
+                                <p>
+                                    　大森神楽は、１９７０年（昭和４５年）７月、当時の衣川村立衣川小学校大森分校教諭佐々木久雄（直木賞作家（故）三好京三）氏と
+                                    当時村の教育長で大原神楽の師匠（故）小坂盛雄氏が中心となり、分校の児童に神楽を伝授したのが始まり。
+                                    その後学校教育とかかわり合いながら活動し、児童全員に踊り伝えられてきた。
+                                    １９９８年（平成１０年）３月に大森分校が閉校となり、保存会として再スタート。
+                                    一関市山谷から伝わる三輪流の流れを継承し、南部神楽の一団体として活動している。<br><br>
+                                    参考文献：大森御神楽保存会公式ホームページ<a href="http://oomorikagura.web.fc2.com/index.html">http://oomorikagura.web.fc2.com/index.html</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="hozonkai2">
+                            <div class="photo6-1"><img src="./img/演目紹介用2022/はねこ　演目紹介用2　透過.png" class="photo6-2"></div>                            
+                            <div class="hozonkai3">
+                                <h3>寺崎はねこ踊り保存会</h3>
+                                <h4>宮城県石巻市桃生町寺崎</h4>
+                                <p>
+                                    　起源は江戸時代、うち続く凶作に苦しめられた人々が、ある年の豊作に恵まれ、
+                                    思い思いの格好をして、喜び、踊り回ったのがはねこ踊りの始まりと言われている。
+                                    その後、所作が整えられ全国でも類のない「豊年踊り」として現在の姿が完成した。
+                                    はねこ踊りの一番の魅力は「皆が喜んでくれること」。
+                                    リズム良く体に響く太鼓や、抑揚のある笛の音は人々の心を弾ませ、扇の日の丸を見え隠れさせながら踊る、
+                                    色彩鮮やかな衣装を着た踊り手の姿は、見る人皆を笑顔にする。<br>
+                                    　ばっけの単独公演では、フィナーレとしても大切に踊られている。<br><br>
+                                    参考文献<br>
+                                    石巻市HP,「はねこ踊りの由来」<a href="https://www.city.ishinomaki.lg.jp/cont/10240000/5500/5500.html">https://www.city.ishinomaki.lg.jp/cont/10240000/5500/5500.html</a><br>
+                                    宮城県HP,「指定文化財〈県指定無形民俗文化財〉寺崎のはねこ踊」<a href="https://www.pref.miyagi.jp/soshiki/bunkazai/33terasakihaneko.html">https://www.pref.miyagi.jp/soshiki/bunkazai/33terasakihaneko.html</a>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- アクセス -->
+                <section class="section7" id="access">
+                    <div class="decor2-1">
+                        <h2 class="decor2-2" id="access">アクセス</h2>
+                    </div>
+                    <p>活動場所：多目的棟(同袍寮,自啓寮の間の建物)</p>
+                    <p>活動日時：火曜日(17時～)、水曜日(17時～)、日曜日(13時～)</p>
+                    <p>サークル体験期間中はチラシやSNSで中央食堂などへの集合を呼び掛けて、部員が案内します‼</p>
+                    <p>賑やかなお囃子の音が聞こえたらそれがばっけです!!</p>
+                    <div><img src="./img/campus_map_1.png" class="photo7-1"></div>
+                </section>
+
+                <!-- トップへ戻るボタン -->
+                <div class="get-top1">
+                    <div id="page_top"><a href="#"><h1 class="get-top2">ページトップへ</h1></a></div> 
+                </div>
+            </div>
+            
+        </main>
+         
+        <!-- フッター -->
+        <footer id="lineup-footer">
+            <div id="sitemap">
+                <div style="margin: auto; margin-top: 5%; width: 70%; text-align:center;">
+                    <p>
+                        こちらのWEBサイトは、HTML5、CSS3、およびJavaScript(jQuery)でコーディングしたものです。<br>
+                        未完成でありながら公開に踏み出しましたため、不備があるかと思いますが、ご了承ください。<br>
+                        また、スマートフォン対応デザインは作成中ですので、パソコンでの閲覧をお願い致します。<br>
+                        尚、写真をふんだんに使っております。使用不可の写真や、もし映り込んでいた写真を見つけ、使用をやめてほしい
+                        という要望がございましたら、Twitter、Instagramもしくは以下のメールアドレスまでメッセージをお寄せください。<br><br>
+
+                        bakke.iwateuni@gmail.com<br>
+                        s0620010@iwate-u.ac.jp<br>
+                    </p>
+                </div>
+                
+                <div id="sitemap1">
+                    <!-- SNSアカウント乗っける場所 -->
+                    <ul class="snsbtniti2">
+                        <li><a  href="https://twitter.com/bakke_san" class="flowbtn11 fl_tw1"><i class="fab fa-twitter"></i><span>Twitter</span></a></li>
+                        <li><a href="https://www.instagram.com/bakke_san/?utm_medium=copy_link" class="flowbtn11 insta_btn11"><i class="fab fa-instagram"></i><span>Instagram</span></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCvCW6kf3ggdNJmAyQeH2btA?app=desktop" class="flowbtn11 fl_yu1"><i class="fab fa-youtube"></i><span>YouTube</span></a></li>
+                    </ul>
+                    <!-- サイトマップ -->
+                    <ul id="sitemap2">
+                        <a href="#intro" style="text-decoration: none;"><li><h3 style="text-align: center;"><span style="border-bottom: solid 1px white;">あいさつ</span></h3></li></a>
+                        <a href="#performance" style="text-decoration: none;"><li><h3 style="text-align: center;"><span style="border-bottom: solid 1px white;">単独公演</span></h3></li></a>
+                        <a href="#history" style="text-decoration: none;"><li><h3 style="text-align: center;"><span style="border-bottom: solid 1px white;">沿革</span></h3></li></a>
+                        <a href="#sns" style="text-decoration: none;"><li><h3 style="text-align: center;"><span style="border-bottom: solid 1px white;">SNS</span></h3></li></a>
+                        <a href="#program" style="text-decoration: none;"><li><h3 style="text-align: center;"><span style="border-bottom: solid 1px white;">演目紹介</span></h3></li></a>
+                        <a href="#schedule" style="text-decoration: none;"><li><h3 style="text-align: center;"><span style="border-bottom: solid 1px white;">活動日程</span></h3></li></a>
+                        <a href="#preservation_society" style="text-decoration: none;"><li><h3 style="text-align: center;"><span style="border-bottom: solid 1px white;">保存会</span></h3></li></a>
+                        <a href="#access" style="text-decoration: none;"><li><h3 style="text-align: center;"><span style="border-bottom: solid 1px white;">アクセス</span></h3></li></a>
+                    </ul>
+                </div>
+
+                <div style="margin: auto; margin-top: 15%; width: 70%;">
+                    <h4>各種SNS</h4>
+                    <div style="text-decoration: none;">
+                        【岩手大学民俗芸能サークル ばっけ】<br>
+                        　　公式ホームページ：<br>
+                        　　公式Twitter：<a href="https://twitter.com/bakke_san" class="url">https://twitter.com/bakke_san</a><br>
+                        　　公式Instagram：<a href="https://www.instagram.com/bakke_san/?utm_medium=copy_link" class="url">https://www.instagram.com/bakke_san/?utm_medium=copy_link</a><br>
+                        　　公式YouTube：<a href="https://www.youtube.com/channel/UCvCW6kf3ggdNJmAyQeH2btA?app=desktop" class="url">https://www.youtube.com/channel/UCvCW6kf3ggdNJmAyQeH2btA?app=desktop</a><br>
+                        　　メールアドレス：bakke.iwateuni@gmail.com<br><br>
+
+                        【澤目獅子踊り保存会】<br>
+                        　　公式Twitter：<a href="https://twitter.com/sawame_shishi" class="url">https://twitter.com/sawame_shishi</a><br>
+                        　　公式Facebook：<a href="https://www.facebook.com/sawame.sisiodori/community/" class="url">https://www.facebook.com/sawame.sisiodori/community/</a><br><br>
+
+                        【三本柳さんさ踊り保存会】<br>
+                        　　公式ホームページ：<a href="http://yanagitusin.web.fc2.com/" class="url">http://yanagitusin.web.fc2.com/</a><br>
+                        　　公式Twitter：<a href="https://twitter.com/sanbonyanagi_33" class="url">https://twitter.com/sanbonyanagi_33</a><br>
+                        　　公式Facebook：<a href="https://ja-jp.facebook.com/sanbonyanagisansa/" class="url">https://ja-jp.facebook.com/sanbonyanagisansa/</a><br>
+                        　　公式YouTube：<a href="https://www.youtube.com/channel/UCwlS9pikCINvbNMzSQRJWyQ?app=desktop" class="url">https://www.youtube.com/channel/UCwlS9pikCINvbNMzSQRJWyQ?app=desktop</a><br><br>
+
+                        【大森御神楽保存会】<br>
+                        　　公式ホームページ：<a href="http://oomorikagura.web.fc2.com/index.html" class="url">http://oomorikagura.web.fc2.com/index.html</a><br><br>
+
+                        【写真提供者】<br>
+                        　　岩手大学写真部<br>
+                        　　Twitter：<a href="https://twitter.com/gandai_photo" class="url">https://twitter.com/gandai_photo</a><br>
+                        　　Instagram：<a href="https://www.instagram.com/gandai_photo/" class="url">https://www.instagram.com/gandai_photo/</a><br>
+                        　　写真提供者Twitter：<br><br>
+
+                        【イラスト担当】<br>
+                        　　2020年度入学（ばっけ第25代）こまち<br><br>
+
+                        【ロゴデザイン担当】<br>
+                        　　2020年度入学（ばっけ第25代）こん<br><br>
+
+                        【サイト創設】<br>
+                        　　2020年度入学（ばっけ第25代）さざん<br>
+                        　　メールアドレス：s0620010@iwate-u.ac.jp<br><br>
+
+                    </div>
+                    
+                </div>
+
+                <div style="width: 20%; margin: auto;margin-top: 50vh; margin-bottom: 30vh;">
+                    <img src="./img/無題108_20220611002554.PNG" alt="" style="width: 100%;">
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
