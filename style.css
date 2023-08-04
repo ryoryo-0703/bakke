@@ -316,11 +316,10 @@ main{
 }
 
 .sec2-tx2{
-    width: 80%;
-    margin: 5%;
-    margin-top: 3%;
-    padding: 5%;
-    text-align: center;
+    margin: auto;
+    margin-top: 10%;
+    font-family: 'Hina Mincho', serif;
+    font-size: 200%;
 }
 
 .sec2-tx3{
