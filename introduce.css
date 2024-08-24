@@ -86,23 +86,23 @@ a:hover{color: mediumslateblue;}
 }
 /*各背景の画像*/
 .img-bg-01 {
-  background-image: url('./img/演目紹介用2022/ホームページ用\　さんさ.jpg');
+  background-image: url('./img/デザイン/演目紹介用/ホームページ用　さんさ.jpg');
 }
 .img-bg-02 {
-  background-image: url('./img/演目紹介用2022/ホームページ用\　中里.jpg');
+  background-image: url('./img/デザイン/演目紹介用/ホームページ用　中里.jpg');
 }
 .img-bg-03 {
-  background-image: url('./img/演目紹介用2022/ホームページ用\　神楽.jpg');
+  background-image: url('./img/デザイン/演目紹介用/ホームページ用　神楽.jpg');
 }
 .img-bg-04 {
-  background-image: url('./img/演目紹介用2022/ホームページ用\　獅子.jpg');
+  background-image: url('./img/デザイン/演目紹介用/ホームページ用　獅子.jpg');
 }
 .img-bg-05 {
-  background-image: url('./img/all1.jpg');
+  background-image: url('./img/デザイン/all1.jpg');
 }
 
 .img-bg-06 {
-    background-image: url('./img/継承.jpg');
+    background-image: url('./img/デザイン/継承.jpg');
 }
 
 /*スクロールするコンテンツ*/

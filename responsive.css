@@ -160,7 +160,7 @@
     /*＝＝＝＝パララックス設定＝＝＝＝*/
     .parallax-bg1 {
         height: 180vh;
-        background-image: url('./img/kag1.jpg');
+        background-image: url('./img/デザイン/kag1.jpg');
         background-attachment: fixed;
         background-position: center;
         background-size: cover;
@@ -168,7 +168,7 @@
     }
     .parallax-bg2 {
         height: 200vh;
-        background-image: url('./img/sisi1.jpg');
+        background-image: url('./img/デザイン/sisi1.jpg');
         background-attachment: fixed;
         background-position: center;
         background-size: cover;
